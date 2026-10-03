@@ -1,0 +1,812 @@
+/* SOFIE BAKEHOUSE - SOFT PINK BAKERY THEME */
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --pink-light: #fff5f6;
+  --pink-soft: #fce4e8;
+  --pink: #f5c2cc;
+  --pink-dark: #d98798;
+  --brown: #65464a;
+  --brown-light: #8a686c;
+  --white: #ffffff;
+  --cream: #fffaf7;
+  --shadow: 0 10px 30px rgba(190, 120, 135, 0.12);
+}
+
+body {
+  margin: 0;
+  background: var(--pink-light);
+  color: var(--brown);
+  font-family: "DM Sans", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* NAVBAR */
+
+nav {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+
+  width: 92%;
+  max-width: 1050px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 18px;
+
+  background: rgba(255, 250, 250, 0.92);
+  border: 1px solid #f6dce1;
+  border-radius: 30px;
+
+  box-shadow: 0 6px 25px rgba(170, 100, 115, 0.08);
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.logo span {
+  color: var(--pink-dark);
+}
+
+.navlinks {
+  display: flex;
+  gap: 22px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.navlinks a:hover {
+  color: var(--pink-dark);
+}
+
+.navbtn {
+  border: 0;
+  border-radius: 20px;
+  padding: 10px 15px;
+  background: var(--pink);
+  color: var(--brown);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#cartCount {
+  display: inline-grid;
+  place-items: center;
+
+  min-width: 19px;
+  height: 19px;
+
+  margin-left: 3px;
+  padding: 0 4px;
+
+  background: white;
+  border-radius: 50%;
+  font-size: 11px;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 92vh;
+
+  padding: 145px 7% 80px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+
+  background:
+    radial-gradient(circle at 85% 20%, #f8d9df 0 10%, transparent 28%),
+    linear-gradient(135deg, #fff8f8, #fdecef);
+}
+
+.badge {
+  display: inline-block;
+
+  padding: 8px 14px;
+
+  background: white;
+  border: 1px solid #f4d6dc;
+  border-radius: 30px;
+
+  color: var(--pink-dark);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 20px 0 18px;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(48px, 7vw, 82px);
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+h1 em {
+  color: var(--pink-dark);
+  font-weight: 500;
+}
+
+.hero p {
+  max-width: 520px;
+
+  color: var(--brown-light);
+  line-height: 1.8;
+}
+
+.cta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 13px 20px;
+
+  border-radius: 25px;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.primary {
+  background: var(--pink-dark);
+  color: white;
+  box-shadow: 0 8px 20px rgba(217, 135, 152, 0.25);
+}
+
+.secondary {
+  background: white;
+  border: 1px solid #f1d6db;
+}
+
+/* HERO CAKE */
+
+.hero-art {
+  position: relative;
+
+  min-height: 450px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cake {
+  position: relative;
+
+  width: min(380px, 75vw);
+  height: 300px;
+
+  background: linear-gradient(#fff, #f8dfe3);
+
+  border-radius: 50% 50% 25% 25%;
+
+  box-shadow: 0 25px 50px rgba(130, 80, 90, 0.16);
+
+  transform: rotate(-3deg);
+}
+
+.cake::before {
+  content: "";
+
+  position: absolute;
+  top: 42px;
+  left: 0;
+  right: 0;
+
+  height: 100px;
+
+  background: #fffafa;
+  border-radius: 50%;
+
+  box-shadow: inset 0 -8px #f0cdd3;
+}
+
+.cake::after {
+  content: "♡ SWEET ♡";
+
+  position: absolute;
+  top: 160px;
+  left: 0;
+  right: 0;
+
+  text-align: center;
+
+  color: var(--pink-dark);
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+}
+
+.flower {
+  position: absolute;
+  font-size: 48px;
+}
+
+.f1 {
+  top: 45px;
+  right: 5%;
+}
+
+.f2 {
+  bottom: 30px;
+  left: 4%;
+}
+
+.sticker {
+  position: absolute;
+  right: 0;
+  bottom: 55px;
+
+  padding: 15px 18px;
+
+  background: white;
+  border-radius: 18px;
+
+  box-shadow: var(--shadow);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  transform: rotate(5deg);
+}
+
+/* SECTION */
+
+section {
+  padding: 85px 6%;
+}
+
+.section-head {
+  max-width: 650px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.eyebrow {
+  color: var(--pink-dark);
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 8px 0 12px;
+
+  font-family: "Playfair Display", serif;
+  font-size: 43px;
+}
+
+.section-head p {
+  color: var(--brown-light);
+  line-height: 1.7;
+}
+
+/* MENU */
+
+.products {
+  background: white;
+}
+
+.grid {
+  max-width: 1100px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 17px;
+}
+
+.card {
+  padding: 13px;
+
+  background: var(--pink-light);
+  border: 1px solid #f5dfe3;
+  border-radius: 23px;
+
+  transition: 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.pic {
+  height: 210px;
+
+  display: grid;
+  place-items: center;
+
+  background: linear-gradient(145deg, #fbe1e6, #fff5f2);
+  border-radius: 17px;
+
+  font-size: 70px;
+}
+
+.card h3 {
+  margin: 14px 5px 4px;
+
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+}
+
+.card p {
+  margin: 0 5px;
+
+  color: var(--brown-light);
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 15px 5px 3px;
+}
+
+.price {
+  font-weight: 800;
+}
+
+.order {
+  border: 0;
+  border-radius: 20px;
+
+  padding: 9px 13px;
+
+  background: var(--pink);
+  color: var(--brown);
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.order:hover {
+  background: #efb5c0;
+}
+
+/* CUSTOM CAKE */
+
+.custom {
+  background: #fff0f2;
+}
+
+.custom-wrap {
+  max-width: 1100px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.custom-copy h2 {
+  text-align: left;
+}
+
+.custom-copy p {
+  color: var(--brown-light);
+  line-height: 1.8;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+
+  margin: 22px 0;
+}
+
+.step {
+  padding: 16px;
+
+  background: rgba(255,255,255,0.75);
+  border: 1px solid #f2d7dc;
+  border-radius: 18px;
+}
+
+.step b {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.step span {
+  color: var(--brown-light);
+  font-size: 12px;
+}
+
+/* CAKE CARD */
+
+.custom-card {
+  padding: 25px;
+
+  background: white;
+  border-radius: 30px;
+
+  box-shadow: var(--shadow);
+
+  transform: rotate(2deg);
+}
+
+.custom-cake {
+  position: relative;
+
+  height: 340px;
+
+  background: linear-gradient(#fff, #f8dce1);
+
+  border-radius: 50% 50% 22px 22px;
+
+  box-shadow: inset 0 -20px #edc7ce;
+}
+
+.custom-cake::before {
+  content: "✿ happy birthday ✿";
+
+  position: absolute;
+  top: 110px;
+  left: 0;
+  right: 0;
+
+  text-align: center;
+
+  color: var(--pink-dark);
+
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+}
+
+.custom-cake::after {
+  content: "♡";
+
+  position: absolute;
+  top: 35px;
+  left: 47%;
+
+  color: var(--pink-dark);
+  font-size: 50px;
+}
+
+/* ABOUT */
+
+.about {
+  max-width: 1050px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.about-art {
+  min-height: 340px;
+
+  display: grid;
+  place-items: center;
+
+  background: #f8dfe4;
+  border-radius: 35px;
+
+  font-size: 110px;
+
+  box-shadow: var(--shadow);
+}
+
+.about h2 {
+  text-align: left;
+}
+
+.about p {
+  color: var(--brown-light);
+  line-height: 1.9;
+}
+
+.mini {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+
+  margin-top: 20px;
+}
+
+.pill {
+  padding: 9px 13px;
+
+  background: white;
+  border: 1px solid #efd9de;
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* CONTACT */
+
+.social {
+  background: white;
+  text-align: center;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.social-buttons a {
+  padding: 13px 18px;
+
+  background: var(--pink-light);
+  border: 1px solid #efd9de;
+  border-radius: 22px;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.social-buttons a:hover {
+  background: var(--pink-soft);
+}
+
+/* CART */
+
+.cart-overlay {
+  display: none;
+
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+
+  background: rgba(80, 45, 50, 0.25);
+  backdrop-filter: blur(4px);
+}
+
+.cart-panel {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  width: min(420px, 94vw);
+  height: 100%;
+
+  padding: 25px;
+
+  background: #fff8f8;
+
+  box-shadow: -10px 0 35px rgba(100, 50, 60, 0.15);
+
+  overflow: auto;
+}
+
+.cart-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-head h3 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: 27px;
+}
+
+.close-cart {
+  width: 36px;
+  height: 36px;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: var(--pink-soft);
+
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  margin: 10px 0;
+  padding: 13px;
+
+  background: white;
+  border: 1px solid #f3dfe2;
+  border-radius: 17px;
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-info b {
+  display: block;
+}
+
+.cart-item-info span {
+  color: var(--brown-light);
+  font-size: 12px;
+}
+
+.qty {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.qty button {
+  width: 27px;
+  height: 27px;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: var(--pink);
+  cursor: pointer;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 20px;
+  padding-top: 17px;
+
+  border-top: 1px solid #eedadd;
+
+  font-weight: 800;
+}
+
+.checkout {
+  width: 100%;
+
+  margin-top: 17px;
+  padding: 14px;
+
+  border: 0;
+  border-radius: 25px;
+
+  background: var(--pink-dark);
+  color: white;
+
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.empty-cart {
+  padding: 45px 10px;
+
+  color: var(--brown-light);
+  text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  padding: 28px 6%;
+
+  border-top: 1px solid #f0dce0;
+
+  color: #96767b;
+  font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .navlinks {
+    display: none;
+  }
+
+  .hero,
+  .custom-wrap,
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 125px;
+  }
+
+  .hero-art {
+    min-height: 390px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-art {
+    min-height: 270px;
+  }
+
+  h2 {
+    font-size: 37px;
+  }
+}
+
+@media (max-width: 520px) {
+  nav {
+    width: 94%;
+  }
+
+  .logo {
+    font-size: 17px;
+  }
+
+  .navbtn {
+    padding: 9px 12px;
+  }
+
+  section {
+    padding: 65px 5%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .cake {
+    height: 260px;
+  }
+
+  .custom-cake {
+    height: 290px;
+  }
+}
